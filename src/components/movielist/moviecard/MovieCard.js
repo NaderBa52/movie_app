@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import ReactStars from "react-rating-stars-component";
 
-const MovieCard = ({movie}) => {
+const MovieCard = ({movie,handleDelete}) => {
     return (
         <div>
             <Card style={{ width: '20rem' }}className='mx-3 my-3'>
@@ -19,8 +19,10 @@ const MovieCard = ({movie}) => {
     Color="#ffd700"
   />
      </p>
+     
     </Card.Text>
-    <Button variant="primary">Watch</Button>
+    <Button variant="primary">Watch</Button> <br/> <br/>
+    <Button variant="primary"  onClick={()=>handleDelete(movie.id) }>Delete</Button>
   </Card.Body>
 </Card>
             
